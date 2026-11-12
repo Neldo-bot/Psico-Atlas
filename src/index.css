@@ -1,0 +1,315 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   5 CLINICAL THEMES & UNIVERSAL SEMANTIC COLOR TOKENS
+   ========================================================================== */
+
+:root, [data-theme="light"] {
+  --bg-canvas: #EFEDEA;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-glass-overlay: rgba(255, 255, 255, 0.88);
+  --text-primary: #1F1F1F;
+  --text-secondary: #575B5F;
+  --border-subtle: #DCD9D0;
+  --accent-primary: #1A665D;
+  --accent-fg: #FFFFFF;
+  --accent-unresolved: #7A8288;
+  --status-warning-bg: #FFF8E6;
+  --status-warning-border: #D99B26;
+  --status-danger-bg: #FDF2F2;
+  --status-danger-text: #B42318;
+  --status-tip-bg: #EBF5F3;
+
+  /* 5 Semantic Mnemonic Colors (Light) */
+  --sem-gold-bg: rgba(217, 155, 38, 0.12);
+  --sem-gold-border: #D99B26;
+  --sem-gold-text: #966106;
+  --sem-truth-bg: rgba(26, 128, 70, 0.10);
+  --sem-truth-border: #1A8046;
+  --sem-truth-text: #0E5E30;
+  --sem-myth-bg: rgba(220, 53, 69, 0.10);
+  --sem-myth-border: #DC3545;
+  --sem-myth-text: #A71D2A;
+  --sem-num-bg: rgba(14, 116, 144, 0.10);
+  --sem-num-border: #0E7490;
+  --sem-num-text: #08556B;
+  --sem-quote-bg: rgba(124, 58, 237, 0.10);
+  --sem-quote-border: #7C3AED;
+  --sem-quote-text: #5B21B6;
+}
+
+[data-theme="dark"] {
+  --bg-canvas: #121212;
+  --bg-surface-elevated: #1E1E1E;
+  --bg-glass-overlay: rgba(18, 18, 18, 0.82);
+  --text-primary: #EFEFEC;
+  --text-secondary: #B0B5BA;
+  --border-subtle: rgba(255, 255, 255, 0.10);
+  --accent-primary: #58B9AE;
+  --accent-fg: #0D1715;
+  --accent-unresolved: #8A929A;
+  --status-warning-bg: #2C2210;
+  --status-warning-border: #D99B26;
+  --status-danger-bg: #2B1416;
+  --status-danger-text: #F97066;
+  --status-tip-bg: #162925;
+
+  /* 5 Semantic Mnemonic Colors (Dark) */
+  --sem-gold-bg: rgba(234, 179, 8, 0.18);
+  --sem-gold-border: #EAB308;
+  --sem-gold-text: #FACC15;
+  --sem-truth-bg: rgba(34, 197, 94, 0.16);
+  --sem-truth-border: #22C55E;
+  --sem-truth-text: #4ADE80;
+  --sem-myth-bg: rgba(248, 113, 113, 0.16);
+  --sem-myth-border: #F87171;
+  --sem-myth-text: #FCA5A5;
+  --sem-num-bg: rgba(56, 189, 248, 0.16);
+  --sem-num-border: #38BDF8;
+  --sem-num-text: #7DD3FC;
+  --sem-quote-bg: rgba(167, 139, 250, 0.16);
+  --sem-quote-border: #A78BFA;
+  --sem-quote-text: #C4B5FD;
+}
+
+[data-theme="sepia"] {
+  --bg-canvas: #F4ECD8;
+  --bg-surface-elevated: #FAF4E8;
+  --bg-glass-overlay: rgba(244, 236, 216, 0.88);
+  --text-primary: #2C221E;
+  --text-secondary: #5C4B3E;
+  --border-subtle: #DFD3B9;
+  --accent-primary: #8C4A27;
+  --accent-fg: #FAF4E8;
+  --accent-unresolved: #8C7A6B;
+  --status-warning-bg: #F2E2C4;
+  --status-warning-border: #B86E14;
+  --status-danger-bg: #F5E0DC;
+  --status-danger-text: #9E2A2B;
+  --status-tip-bg: #EFE4CE;
+
+  /* 5 Semantic Mnemonic Colors (Sepia) */
+  --sem-gold-bg: rgba(184, 110, 20, 0.15);
+  --sem-gold-border: #B86E14;
+  --sem-gold-text: #7D4607;
+  --sem-truth-bg: rgba(43, 110, 82, 0.12);
+  --sem-truth-border: #2B6E52;
+  --sem-truth-text: #1B4C38;
+  --sem-myth-bg: rgba(158, 42, 43, 0.12);
+  --sem-myth-border: #9E2A2B;
+  --sem-myth-text: #731B1C;
+  --sem-num-bg: rgba(26, 95, 122, 0.12);
+  --sem-num-border: #1A5F7A;
+  --sem-num-text: #114255;
+  --sem-quote-bg: rgba(114, 47, 130, 0.12);
+  --sem-quote-border: #722F82;
+  --sem-quote-text: #501D5C;
+}
+
+/* THEME 4: Violeta Calmo / Lavanda Sereno */
+[data-theme="violet"] {
+  --bg-canvas: #F2EFF9;
+  --bg-surface-elevated: #FCFAFF;
+  --bg-glass-overlay: rgba(242, 239, 249, 0.90);
+  --text-primary: #221B38;
+  --text-secondary: #655B7F;
+  --border-subtle: #D8D0E8;
+  --accent-primary: #634A9E;
+  --accent-fg: #FFFFFF;
+  --accent-unresolved: #8B82A5;
+  --status-warning-bg: #FFF8E6;
+  --status-warning-border: #D99B26;
+  --status-danger-bg: #FDF2F4;
+  --status-danger-text: #B42345;
+  --status-tip-bg: #EFEAF9;
+
+  /* 5 Semantic Mnemonic Colors (Violet) */
+  --sem-gold-bg: rgba(217, 155, 38, 0.14);
+  --sem-gold-border: #D99B26;
+  --sem-gold-text: #8C5903;
+  --sem-truth-bg: rgba(26, 138, 92, 0.12);
+  --sem-truth-border: #1A8A5C;
+  --sem-truth-text: #0E6340;
+  --sem-myth-bg: rgba(220, 53, 90, 0.12);
+  --sem-myth-border: #DC355A;
+  --sem-myth-text: #9B1C3A;
+  --sem-num-bg: rgba(43, 98, 166, 0.12);
+  --sem-num-border: #2B62A6;
+  --sem-num-text: #1A4479;
+  --sem-quote-bg: rgba(99, 74, 158, 0.15);
+  --sem-quote-border: #634A9E;
+  --sem-quote-text: #422D73;
+}
+
+/* THEME 5: Bosque Salvia / Verde Relajante */
+[data-theme="sage"] {
+  --bg-canvas: #EAF2EE;
+  --bg-surface-elevated: #F7FBF9;
+  --bg-glass-overlay: rgba(234, 242, 238, 0.90);
+  --text-primary: #182B22;
+  --text-secondary: #4D6659;
+  --border-subtle: #C9DCD2;
+  --accent-primary: #2B6E52;
+  --accent-fg: #FFFFFF;
+  --accent-unresolved: #7A9687;
+  --status-warning-bg: #FFF8E6;
+  --status-warning-border: #D99B26;
+  --status-danger-bg: #FDF2F2;
+  --status-danger-text: #B42318;
+  --status-tip-bg: #E2EFE8;
+
+  /* 5 Semantic Mnemonic Colors (Sage) */
+  --sem-gold-bg: rgba(217, 155, 38, 0.14);
+  --sem-gold-border: #D99B26;
+  --sem-gold-text: #8C5903;
+  --sem-truth-bg: rgba(43, 110, 82, 0.14);
+  --sem-truth-border: #2B6E52;
+  --sem-truth-text: #184D37;
+  --sem-myth-bg: rgba(214, 69, 69, 0.12);
+  --sem-myth-border: #D64545;
+  --sem-myth-text: #962828;
+  --sem-num-bg: rgba(26, 115, 138, 0.12);
+  --sem-num-border: #1A738A;
+  --sem-num-text: #0E5162;
+  --sem-quote-bg: rgba(108, 62, 142, 0.12);
+  --sem-quote-border: #6C3E8E;
+  --sem-quote-text: #4C2668;
+}
+
+/* ==========================================================================
+   GLOBAL BASE STYLES
+   ========================================================================== */
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 65ch Typographic Measure & Line Height 1.6 */
+.editorial-prose {
+  max-width: 65ch;
+  line-height: 1.65;
+  font-size: 16px;
+  font-family: Georgia, 'Newsreader', 'Source Serif 4', serif;
+}
+
+/* Strict Tabular Numerals for Clinical Precision */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Glassmorphism Overlays */
+.glass-overlay {
+  background: var(--bg-glass-overlay);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+}
+
+/* ==========================================================================
+   5 SEMANTIC MNEMONIC HIGHLIGHTING UTILITIES
+   ========================================================================== */
+
+.hl-gold {
+  background-color: var(--sem-gold-bg);
+  border-left: 3px solid var(--sem-gold-border);
+  color: var(--sem-gold-text);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.hl-truth {
+  background-color: var(--sem-truth-bg);
+  border-left: 3px solid var(--sem-truth-border);
+  color: var(--sem-truth-text);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.hl-myth {
+  background-color: var(--sem-myth-bg);
+  border-left: 3px solid var(--sem-myth-border);
+  color: var(--sem-myth-text);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 500;
+  text-decoration: line-through;
+  text-decoration-color: var(--sem-myth-border);
+}
+
+.hl-num {
+  background-color: var(--sem-num-bg);
+  color: var(--sem-num-text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid var(--sem-num-border);
+  font-weight: 600;
+  font-size: 0.92em;
+}
+
+.hl-quote {
+  background-color: var(--sem-quote-bg);
+  border-left: 3px solid var(--sem-quote-border);
+  color: var(--sem-quote-text);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   PRINT STYLESHEET (FIX FOR A4 MULTI-PAGE PRINTING)
+   ========================================================================== */
+
+@media print {
+  html, body {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: static !important;
+    display: block !important;
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  #root, .app-shell, .main-workspace, .canvas-scroll-container, main {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  header, aside, .no-print, button, #cmdKTrigger, nav {
+    display: none !important;
+  }
+
+  .editorial-prose {
+    max-width: 100% !important;
+    font-size: 11pt !important;
+    line-height: 1.45 !important;
+  }
+
+  .print-page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .print-avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
